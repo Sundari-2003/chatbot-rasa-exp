@@ -1,0 +1,53 @@
+{
+  "text": {
+    "hi": 11,
+    "hello": 9,
+    "hey": 10,
+    "bye": 4,
+    "goodbye": 7,
+    "see": 18,
+    "you": 21,
+    "what": 20,
+    "is": 13,
+    "alice": 1,
+    "s": 17,
+    "balance": 2,
+    "show": 19,
+    "me": 14,
+    "bob": 3,
+    "account": 0,
+    "how": 12,
+    "much": 16,
+    "money": 15,
+    "does": 6,
+    "charlie": 5,
+    "have": 8
+  },
+  "intent": {
+    "greet": 3,
+    "goodbye": 2,
+    "check_balance": 1,
+    "bot_challenge": 0
+  },
+  "response": null,
+  "action_name": {
+    "action_listen": 7,
+    "action_restart": 8,
+    "action_session_start": 10,
+    "action_default_fallback": 5,
+    "action_deactivate_loop": 2,
+    "action_revert_fallback_events": 9,
+    "action_default_ask_affirmation": 3,
+    "action_default_ask_rephrase": 4,
+    "action_two_stage_fallback": 11,
+    "action_unlikely_intent": 12,
+    "action_back": 0,
+    "action_extract_slots": 6,
+    "action_check_balance": 1,
+    "utter_goodbye": 13,
+    "utter_greet": 14,
+    "utter_iamabot": 15
+  },
+  "action_text": null,
+  "intent_response_key": null
+}
