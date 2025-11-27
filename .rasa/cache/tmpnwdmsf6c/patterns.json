@@ -1,0 +1,6 @@
+[
+  {
+    "name": "customer_name",
+    "pattern": "(\\bAlice\\b|\\bBob\\b|\\bCharlie\\b|\\bDavid\\b|\\bEve\\b)"
+  }
+]

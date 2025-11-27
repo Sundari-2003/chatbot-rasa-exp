@@ -21,6 +21,15 @@ nlu:
     - balance of [David](customer_name)
     - how much money does [Eve](customer_name) have
 
+- intent: check_account_type
+  examples: |
+    - what type of account does [Alice](customer_name) have
+    - tell me the account type of [Bob](customer_name)
+    - account type for [Charlie](customer_name)
+    - what is [David](customer_name)'s account type
+    - show [Eve](customer_name)'s account type
+    
+
 - lookup: customer_name
   examples: |
     - Alice
@@ -28,3 +37,35 @@ nlu:
     - Charlie
     - David
     - Eve
+
+
+# version: "3.1"
+
+# nlu:
+# - intent: greet
+#   examples: |
+#     - hi
+#     - hello
+#     - hey
+
+# - intent: goodbye
+#   examples: |
+#     - bye
+#     - goodbye
+#     - see you
+
+# - intent: check_balance
+#   examples: |
+#     - what is [Alice](customer_name)'s balance
+#     - show me [Bob](customer_name)'s account balance
+#     - how much money does [Charlie](customer_name) have
+#     - balance of [David](customer_name)
+#     - how much money does [Eve](customer_name) have
+
+# - lookup: customer_name
+#   examples: |
+#     - Alice
+#     - Bob
+#     - Charlie
+#     - David
+#     - Eve
