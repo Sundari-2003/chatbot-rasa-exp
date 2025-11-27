@@ -13,6 +13,11 @@ stories:
     - intent: check_account_type
     - action: action_check_account_type
 
+- story: check last transaction story
+  steps:
+    - intent: check_last_transaction
+    - action: action_check_last_transaction
+
 
 # version: "3.1"
 

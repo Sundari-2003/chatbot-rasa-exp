@@ -5,6 +5,7 @@ intents:
   - goodbye
   - check_balance
   - check_account_type
+  - check_last_transaction
 
 entities:
   - customer_name
@@ -30,6 +31,7 @@ responses:
 actions:
   - action_check_balance
   - action_check_account_type
+  - action_check_last_transaction
 
 
 

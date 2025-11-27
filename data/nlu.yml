@@ -28,7 +28,14 @@ nlu:
     - account type for [Charlie](customer_name)
     - what is [David](customer_name)'s account type
     - show [Eve](customer_name)'s account type
-    
+
+- intent: check_last_transaction
+  examples: |
+    - what was [Alice](customer_name)'s last transaction
+    - show me [Bob](customer_name)'s recent transaction
+    - tell me [Charlie](customer_name)'s last activity
+    - last transaction of [David](customer_name)
+    - what did [Eve](customer_name) last do
 
 - lookup: customer_name
   examples: |

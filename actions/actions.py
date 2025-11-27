@@ -105,6 +105,53 @@ class ActionCheckAccountType(Action):
         return []
 
 
+class ActionCheckLastTransaction(Action):
+
+    def name(self) -> Text:
+        return "action_check_last_transaction"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
+
+        # 1️⃣ Get slot value
+        customer_name = tracker.get_slot("customer_name")
+
+        if not customer_name:
+            dispatcher.utter_message(text="Please tell me the customer name.")
+            return []
+
+        try:
+            conn = get_connection()
+            cursor = conn.cursor(dictionary=True)
+
+            # Case-insensitive search
+            sql = "SELECT last_transaction FROM customers WHERE LOWER(name)=LOWER(%s)"
+            cursor.execute(sql, (customer_name,))
+            result = cursor.fetchone()
+
+            if result:
+                last_txn = result["last_transaction"]
+                dispatcher.utter_message(
+                    text=f"{customer_name}'s last transaction was: {last_txn}"
+                )
+            else:
+                dispatcher.utter_message(text="Customer not found in database.")
+
+        except Exception as e:
+            dispatcher.utter_message(text="Database error occurred.")
+            print("[ERROR] MySQL:", str(e))
+
+        finally:
+            cursor.close()
+            conn.close()
+
+        return []
+
+
 # from typing import Any, Text, Dict, List
 # from rasa_sdk import Action, Tracker
 # from rasa_sdk.executor import CollectingDispatcher
