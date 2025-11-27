@@ -59,7 +59,6 @@ class ActionCheckBalance(Action):
         return []
 
 
-# ⭐ NEW FEATURE: Check Account Type
 class ActionCheckAccountType(Action):
 
     def name(self) -> Text:
